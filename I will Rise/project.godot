@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
 config/name="I will Rise"
+run/main_scene="res://test level.tscn"
 config/icon="res://icon.png"
 
 [rendering]
