@@ -14,6 +14,7 @@ var cursor_pos = Vector3.ZERO
 var gravity = 9.8
 var gravity_vec = Vector3()
 var velocity = Vector3.ZERO
+#player facing cursor
 
 func look_at_cursor():
 	var player_pos = global_transform.origin
@@ -25,6 +26,7 @@ func look_at_cursor():
 	cursor_pos = drop_plane.intersects_ray(from,to)
 	look_at(cursor_pos,Vector3.UP)
 	
+	#inputs for moving
 	
 func get_input():
 	var input = Vector3(
@@ -37,7 +39,7 @@ func get_input():
 	
 func _process(delta):
 	pass
-
+#gravtiy
 func _physics_process(delta):
 	direction = Vector3()
 	
@@ -58,7 +60,7 @@ func _physics_process(delta):
 	print(input, move_vector)
 	
 	move_vector = input * speed
-	move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP)
+	move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP, true)
 	#print(move_vector)
 	
 	
