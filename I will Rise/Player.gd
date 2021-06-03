@@ -60,7 +60,8 @@ func _physics_process(delta):
 	print(input, move_vector)
 	
 	move_vector = input * speed
-	move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP, true)
+	move_vector = move_and_slide(move_vector, Vector3.UP, true)
+	#move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP, true)
 	#print(move_vector)
 	
 	
