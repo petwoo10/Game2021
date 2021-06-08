@@ -61,6 +61,12 @@ func _physics_process(delta):
 	
 	move_vector = input * speed
 	move_vector = move_and_slide(move_vector, Vector3.UP, true)
+	
+	if move_vector !=Vector3.ZERO:
+		$newplayer/AnimationPlayer.play("running")
+		
+	else:
+		$newplayer/AnimationPlayer.play("idle")
 	#move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP, true)
 	#print(move_vector)
 	
