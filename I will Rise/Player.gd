@@ -8,13 +8,16 @@ export var max_speed = 10
 export var friction = 10 
 export var speed = 1
 
+var attacking = false
 var direction = Vector3()
 var move_vector = Vector3.ZERO
 var cursor_pos = Vector3.ZERO
 var gravity = 9.8
 var gravity_vec = Vector3()
 var velocity = Vector3.ZERO
+var melee_damage= 50
 #player facing cursor
+onready var attck = $newplayer/AnimationPlayer
 
 func look_at_cursor():
 	var player_pos = global_transform.origin
@@ -35,9 +38,33 @@ func get_input():
 		-int(Input.is_action_pressed("ui_down")) + int(Input.is_action_pressed("ui_up"))
 	)
 	input = input.normalized()
+	
 	return input
 	
+func melee():
+	if Input.is_action_just_pressed("ui_accept"):
+		$newplayer/AnimationPlayer.play("attck")
+		var checkenemy = $hitbox.get_overlapping_bodies()
+		attacking = true
+		print("attacking")
+		for enermy in checkenemy:
+			if enermy.is_in_group("enemy"):
+				enermy.enermy_health -= 10
+				if enermy.enermy_health <= 0:
+					print("dead")
+					enermy.queue_free()
+		yield($newplayer/AnimationPlayer,"animation_finished")
+		attacking = false
+
+		
+	
 func _process(delta):
+	#if attack pushed
+		#checkenemy = area.get_overlappingbodies
+		#for enemy in checkenemy 
+			#if enemy.isingroup(enemy)
+				#kill enemy
+	
 	pass
 #gravtiy
 func _physics_process(delta):
@@ -53,24 +80,24 @@ func _physics_process(delta):
 			speed = max_speed
 	if not is_on_floor():
 		input.y = -gravity 
-		print("flying")	
+#		print("flying")	
 	else:
 		input.y = 0
 		
-	print(input, move_vector)
+	#print(input, move_vector)
 	
 	move_vector = input * speed
 	move_vector = move_and_slide(move_vector, Vector3.UP, true)
-	
-	if move_vector !=Vector3.ZERO:
-		$newplayer/AnimationPlayer.play("running")
+	if not attacking:
+		if move_vector !=Vector3.ZERO:
+			$newplayer/AnimationPlayer.play("running")
+			
+		else:
+			$newplayer/AnimationPlayer.play("idle")
+		#move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP, true)
+		#print(move_vector)
 		
-	else:
-		$newplayer/AnimationPlayer.play("idle")
-	#move_vector = move_and_slide_with_snap(move_vector, Vector3.DOWN, Vector3.UP, true)
-	#print(move_vector)
-	
-	
+	melee()
 	look_at_cursor()
 
 	

@@ -12,5 +12,5 @@ func _process(delta):
 	camera_pos.z = player_follow.translation.z-20
 	camera_pos.y = player_follow.translation.y+20
 	set_translation(camera_pos)
-	if player_outline.get_collider():
-		print(player_outline)
+	#if player_outline.get_collider():
+	#	print(player_outline)

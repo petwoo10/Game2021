@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
 [ext_resource path="res://RayCast.gd" type="Script" id=3]
+[ext_resource path="res://enermy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
@@ -15,7 +16,7 @@
 [sub_resource type="PhysicsMaterial" id=5]
 
 [sub_resource type="Environment" id=6]
-ambient_light_color = Color( 0.537255, 0.537255, 0.537255, 1 )
+ambient_light_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 
 [node name="test level" type="Spatial"]
 
@@ -52,7 +53,7 @@ material/0 = null
 shape = SubResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361733, 1.16508, 3.70602 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361733, 1.31164, 3.70602 )
 
 [node name="StaticBody2" type="StaticBody" parent="."]
 transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 1, -10, 11, 11.9886 )
@@ -69,8 +70,14 @@ shape = SubResource( 3 )
 environment = SubResource( 6 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -0.839396, 0.379406, 0.389185, -0.202828, -0.882979, 0.423331, 0.504257, 0.276405, 0.818123, 0, 11.294, 0 )
-light_energy = 0.66
+transform = Transform( -0.839396, 0.379406, 0.389186, -0.202828, -0.882979, 0.423331, 0.504257, 0.276405, 0.818123, 28.4591, 27.8647, 0 )
+light_energy = 10.24
 light_indirect_energy = 0.0
 light_specular = 0.4
 shadow_enabled = true
+
+[node name="enermy" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14 )
+
+[editable path="Player"]
+[editable path="Player/newplayer"]
