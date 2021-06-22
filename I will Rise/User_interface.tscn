@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://User_interface.gd" type="Script" id=1]
+
+[node name="User_interface" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_right = 414.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

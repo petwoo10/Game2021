@@ -18,6 +18,10 @@ config/name="I will Rise"
 run/main_scene="res://test level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerStats="*res://player_stats.gd"
+
 [input]
 
 ui_accept={
