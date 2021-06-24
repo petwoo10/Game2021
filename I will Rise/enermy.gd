@@ -5,6 +5,9 @@ var player
 var move_speed = 230
 var follow_player = false
 var enermy_health = 30
+var player_list = ["res://Player.tscn"]
+var enemy_attack = 10
+
 
 func _process(delta):
 	if enermy_health <=0:
@@ -36,3 +39,8 @@ func _on_Area_body_exited(body):
 		print("lost")
 		follow_player = false
 		
+
+
+func _on_hitbox_body_entered(body):
+	if body.filename in player_list:
+		PlayerStats.change_health(-enemy_attack)
