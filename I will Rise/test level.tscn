@@ -80,7 +80,7 @@ shadow_enabled = true
 [node name="User_interface" parent="." instance=ExtResource( 5 )]
 
 [node name="enermy" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -14 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75887, -14 )
 
 [editable path="Player"]
 [editable path="Player/newplayer"]

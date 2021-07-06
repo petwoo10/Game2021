@@ -4,7 +4,7 @@ extends KinematicBody
 var player 
 var move_speed = 230
 var follow_player = false
-var enermy_health = 30
+var enermy_health = 50
 var player_list = ["res://Player.tscn"]
 var enemy_attack = 10
 
@@ -20,7 +20,12 @@ func _physics_process(delta):
 		var pos = player.global_transform.origin
 		var facing = -global_transform.basis.z
 		look_at(pos,Vector3.UP)
-		move_and_slide(facing * move_speed *delta)
+		if $RayCast.get_collider() !=null:
+			if $RayCast.get_collider().name == "player":
+				move_and_slide(facing * move_speed *delta,Vector3.UP)
+				$enemy/AnimationPlayer.play("runing")
+		else:
+			$enemy/AnimationPlayer.play("idle")
 	
 	
 	
