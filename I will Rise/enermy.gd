@@ -20,9 +20,9 @@ func _physics_process(delta):
 		var pos = player.global_transform.origin
 		var facing = -global_transform.basis.z
 		look_at(pos,Vector3.UP)
+		move_and_slide(facing * move_speed *delta,Vector3.UP)
 		if $RayCast.get_collider() !=null:
 			if $RayCast.get_collider().name == "player":
-				move_and_slide(facing * move_speed *delta,Vector3.UP)
 				$enemy/AnimationPlayer.play("runing")
 		else:
 			$enemy/AnimationPlayer.play("idle")
