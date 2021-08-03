@@ -19,8 +19,9 @@ var velocity = Vector3.ZERO
 #player facing cursor
 
 export var gravity = Vector3.DOWN * 10
-export var speed = 8
-export var rot_speed = 0.85
+export var speed = 14
+export var rot_speed = 1
+
 
 #var velocity = Vector3.ZERO
 
