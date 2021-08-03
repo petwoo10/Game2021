@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SUV.obj-b7b3c2dac1319a44571eb996eb9feaa7.mesh"
+
+[deps]
+
+files=[ "res://.import/SUV.obj-b7b3c2dac1319a44571eb996eb9feaa7.mesh" ]
+
+source_file="res://Realistic Car Pack - Nov 2018/OBJ/SUV.obj"
+dest_files=[ "res://.import/SUV.obj-b7b3c2dac1319a44571eb996eb9feaa7.mesh", "res://.import/SUV.obj-b7b3c2dac1319a44571eb996eb9feaa7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

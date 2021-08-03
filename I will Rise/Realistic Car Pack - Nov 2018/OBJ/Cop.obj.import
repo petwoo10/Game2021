@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Cop.obj-9212cf50ad036f08114c9110de71ac27.mesh"
+
+[deps]
+
+files=[ "res://.import/Cop.obj-9212cf50ad036f08114c9110de71ac27.mesh" ]
+
+source_file="res://Realistic Car Pack - Nov 2018/OBJ/Cop.obj"
+dest_files=[ "res://.import/Cop.obj-9212cf50ad036f08114c9110de71ac27.mesh", "res://.import/Cop.obj-9212cf50ad036f08114c9110de71ac27.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

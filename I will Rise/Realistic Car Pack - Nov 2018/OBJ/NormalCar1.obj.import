@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/NormalCar1.obj-386824fa54ffb402722274d39d80218d.mesh"
+
+[deps]
+
+files=[ "res://.import/NormalCar1.obj-386824fa54ffb402722274d39d80218d.mesh" ]
+
+source_file="res://Realistic Car Pack - Nov 2018/OBJ/NormalCar1.obj"
+dest_files=[ "res://.import/NormalCar1.obj-386824fa54ffb402722274d39d80218d.mesh", "res://.import/NormalCar1.obj-386824fa54ffb402722274d39d80218d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

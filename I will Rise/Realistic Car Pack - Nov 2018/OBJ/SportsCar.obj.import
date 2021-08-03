@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/SportsCar.obj-a46ee3bda3994504f9f1358c49266188.mesh"
+
+[deps]
+
+files=[ "res://.import/SportsCar.obj-a46ee3bda3994504f9f1358c49266188.mesh" ]
+
+source_file="res://Realistic Car Pack - Nov 2018/OBJ/SportsCar.obj"
+dest_files=[ "res://.import/SportsCar.obj-a46ee3bda3994504f9f1358c49266188.mesh", "res://.import/SportsCar.obj-a46ee3bda3994504f9f1358c49266188.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

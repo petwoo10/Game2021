@@ -91,4 +91,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82806, 5.64666, 40.5396 )
 transform = Transform( 2.53496, 0, 0, 0, 3.65303, 0, 0, 0, 2.78992, 25, 5, 38 )
 
 [editable path="Player"]
-[editable path="Player/newplayer"]
