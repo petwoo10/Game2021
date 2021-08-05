@@ -3,18 +3,18 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
 [ext_resource path="res://RayCast.gd" type="Script" id=3]
-[ext_resource path="res://enermy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://grouns.tscn" type="PackedScene" id=4]
 [ext_resource path="res://User_interface.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tree_long.tscn" type="PackedScene" id=6]
 [ext_resource path="res://rock_big.tscn" type="PackedScene" id=7]
 
 [sub_resource type="PhysicsMaterial" id=1]
 
+[sub_resource type="PhysicsMaterial" id=4]
+
 [sub_resource type="CubeMesh" id=2]
 
 [sub_resource type="BoxShape" id=3]
-
-[sub_resource type="PhysicsMaterial" id=4]
 
 [sub_resource type="PhysicsMaterial" id=5]
 
@@ -26,13 +26,6 @@ ambient_light_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 [node name="StaticBody3" type="StaticBody" parent="."]
 transform = Transform( 29.4103, 0, 0, 0, -10.0395, 0.791556, 0, -53.5828, -0.0423873, 6.09074, 10.0841, 69.3653 )
 physics_material_override = SubResource( 1 )
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
-mesh = SubResource( 2 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
-shape = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.83961, 0.40366, -0.363475, 0.00910424, 0.679513, 0.733607, 0.543113, 0.612635, -0.574201, -15.8766, 26.0029, -17.471 )
@@ -81,13 +74,13 @@ shadow_enabled = true
 
 [node name="User_interface" parent="." instance=ExtResource( 5 )]
 
-[node name="enermy" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75887, -14 )
-
 [node name="rock_big2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82806, 5.64666, 40.5396 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7748, 5.64666, 40.5396 )
 
 [node name="tree_long" parent="." instance=ExtResource( 6 )]
 transform = Transform( 2.53496, 0, 0, 0, 3.65303, 0, 0, 0, 2.78992, 25, 5, 38 )
+
+[node name="grouns" parent="." instance=ExtResource( 4 )]
+transform = Transform( 4, 0, 0, 0, 3.88417, 0.955625, 0, -0.955625, 3.88417, 0, 16.631, 93.1863 )
 
 [editable path="Player"]

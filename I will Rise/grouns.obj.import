@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grouns.obj-97798f467fe4cc74a044e8310de72949.mesh"
+
+[deps]
+
+files=[ "res://.import/grouns.obj-97798f467fe4cc74a044e8310de72949.mesh" ]
+
+source_file="res://grouns.obj"
+dest_files=[ "res://.import/grouns.obj-97798f467fe4cc74a044e8310de72949.mesh", "res://.import/grouns.obj-97798f467fe4cc74a044e8310de72949.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
