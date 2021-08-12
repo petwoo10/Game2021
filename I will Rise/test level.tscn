@@ -9,13 +9,14 @@
 [ext_resource path="res://rock_big.tscn" type="PackedScene" id=7]
 [ext_resource path="res://rock_lager.tscn" type="PackedScene" id=8]
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 
 [node name="test level" type="Spatial"]
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.83961, 0.40366, -0.363475, 0.00910424, 0.679513, 0.733607, 0.543113, 0.612635, -0.574201, -15.8766, 26.0029, -17.471 )
+fov = 81.0
 script = ExtResource( 2 )
 
 [node name="RayCast" type="RayCast" parent="Camera"]
@@ -29,7 +30,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361733, 1.31164, 3.70602 )
 mass = 145.97
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 5 )
+environment = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.839396, 0.379406, 0.389186, -0.202828, -0.882979, 0.423331, 0.504257, 0.276405, 0.818123, 28.4591, 27.8647, 0 )
@@ -47,7 +48,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7748, 5.95419, 40.5396 )
 transform = Transform( 2.18086, 0, -2.37999, 0, 3.22808, 0, 2.37999, 0, 2.18086, 34.7846, 19.1573, 153.775 )
 
 [node name="tree_long" parent="." instance=ExtResource( 6 )]
-transform = Transform( 2.53496, 0, 0, 0, 3.65303, 0, 0, 0, 2.78992, 24.8494, 4.76015, 38.3238 )
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 24.8494, 4.76015, 38.3238 )
 
 [node name="GROUND " parent="." instance=ExtResource( 4 )]
 transform = Transform( -3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, 0, 51.6409, 324.599 )

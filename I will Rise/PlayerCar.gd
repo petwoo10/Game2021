@@ -2,7 +2,7 @@ extends VehicleBody
 
 
 var acclen = 400
-var turn_speed = 3
+var turn_speed = 1
 var streing_taget 
 var braking = 10
 
