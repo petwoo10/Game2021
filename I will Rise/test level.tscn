@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://tree_long.tscn" type="PackedScene" id=6]
 [ext_resource path="res://rock_big.tscn" type="PackedScene" id=7]
 [ext_resource path="res://rock_lager.tscn" type="PackedScene" id=8]
+[ext_resource path="res://WATER.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.603922, 0.603922, 0.603922, 1 )
@@ -58,5 +59,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.2475, 24.3261, 176.486 )
 
 [node name="rock_lager" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6936, 12.1631, 88.243 )
+
+[node name="WATER" parent="." instance=ExtResource( 9 )]
+transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, 0, -3.56869, 0 )
 
 [editable path="Player"]

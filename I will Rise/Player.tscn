@@ -9,7 +9,9 @@ friction = 0.3
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 1.83313, 1.06168, 4.76513 )
 
-[node name="PlayerCar" type="VehicleBody"]
+[node name="PlayerCar" type="VehicleBody" groups=[
+"Player",
+]]
 mass = 223.636
 physics_material_override = SubResource( 1 )
 script = ExtResource( 1 )
