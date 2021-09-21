@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://model/ChiKareGo2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://MainMenu.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://model/ChiKareGo2.ttf"
@@ -17,6 +18,7 @@ font_data = ExtResource( 1 )
 [node name="MainMenu" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -36,92 +38,86 @@ margin_top = 264.0
 margin_right = 544.0
 margin_bottom = 336.0
 
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+[node name="ContainerTitle" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_right = 65.0
 margin_bottom = 15.0
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ContainerTitle"]
 margin_right = 65.0
 margin_bottom = 15.0
 custom_fonts/font = SubResource( 2 )
 text = "I Will Rise"
 
-[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+[node name="ContainerStart" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 19.0
 margin_right = 65.0
-margin_bottom = 72.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_bottom = 34.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/ContainerStart"]
 margin_left = 2.0
 margin_right = 62.0
-margin_bottom = 53.0
-
-[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_right = 60.0
 margin_bottom = 15.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2"]
-margin_left = 7.0
-margin_right = 52.0
-margin_bottom = 15.0
-
-[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/ContainerStart/HBoxContainer"]
 margin_right = 7.0
 margin_bottom = 15.0
+rect_min_size = Vector2( 7, 0 )
 custom_fonts/font = SubResource( 3 )
 text = ">"
 
-[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer"]
+[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/ContainerStart/HBoxContainer"]
 margin_left = 11.0
-margin_right = 45.0
+margin_right = 60.0
 margin_bottom = 15.0
+rect_min_size = Vector2( 49, 0 )
 custom_fonts/font = SubResource( 4 )
 text = "Start"
 
-[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_top = 19.0
-margin_right = 60.0
-margin_bottom = 34.0
+[node name="ContainerOptions" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 38.0
+margin_right = 65.0
+margin_bottom = 53.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3"]
-margin_right = 60.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/ContainerOptions"]
+margin_left = 2.0
+margin_right = 62.0
 margin_bottom = 15.0
 
-[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/ContainerOptions/HBoxContainer"]
 margin_right = 7.0
 margin_bottom = 15.0
+rect_min_size = Vector2( 7, 0 )
 custom_fonts/font = SubResource( 3 )
 text = ">"
 
-[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer"]
+[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/ContainerOptions/HBoxContainer"]
 margin_left = 11.0
 margin_right = 60.0
 margin_bottom = 15.0
 custom_fonts/font = SubResource( 4 )
 text = "Options"
 
-[node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer"]
-margin_top = 38.0
-margin_right = 60.0
-margin_bottom = 53.0
+[node name="ContainerExit" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 57.0
+margin_right = 65.0
+margin_bottom = 72.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4"]
-margin_left = 8.0
-margin_right = 52.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/ContainerExit"]
+margin_left = 2.0
+margin_right = 62.0
 margin_bottom = 15.0
 
-[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer"]
+[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/ContainerExit/HBoxContainer"]
 margin_right = 7.0
 margin_bottom = 15.0
+rect_min_size = Vector2( 7, 0 )
 custom_fonts/font = SubResource( 3 )
 text = ">"
 
-[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer"]
+[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/ContainerExit/HBoxContainer"]
 margin_left = 11.0
-margin_right = 44.0
+margin_right = 60.0
 margin_bottom = 15.0
+rect_min_size = Vector2( 49, 0 )
 custom_fonts/font = SubResource( 4 )
 text = "Exits"
