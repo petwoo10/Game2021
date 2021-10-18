@@ -6,7 +6,7 @@ var turn_speed = 1
 var streing_taget 
 var braking = 10
 
-
+# moving the car the player is in 
 # Called when the node enters the scene tree for the first time.
 func _physics_process(delta):
 	streing_taget = Input.get_action_strength("left")-Input.get_action_strength("right")

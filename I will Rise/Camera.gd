@@ -5,7 +5,7 @@ onready var player_follow = get_parent().get_node("Player")
 onready var player_outline = $RayCast
 
 
-
+#postion of camera 
 func _process(delta):
 	var camera_pos = Vector3.ZERO
 	camera_pos.x = player_follow.translation.x-20

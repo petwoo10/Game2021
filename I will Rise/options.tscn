@@ -1,23 +1,84 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
 
-[node name="ColorRect" type="ColorRect"]
+[ext_resource path="res://model/ChiKareGo2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://options.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://model/ChiKareGo2.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
 color = Color( 0.368627, 0.317647, 0.827451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 490.0
-margin_top = 293.0
-margin_right = 533.0
-margin_bottom = 307.0
-text = "sound "
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 457.0
+margin_top = 283.0
+margin_right = 567.0
+margin_bottom = 317.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContainerTitle" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 110.0
+margin_bottom = 15.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ContainerTitle"]
+margin_right = 110.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 2 )
+text = "work in progess"
+
+[node name="ContainerBackMenu" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 19.0
+margin_right = 110.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( -479, -260.905 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/ContainerBackMenu"]
+margin_left = 4.0
+margin_right = 106.0
+margin_bottom = 15.0
+
+[node name="selector" type="Label" parent="CenterContainer/VBoxContainer/ContainerBackMenu/HBoxContainer"]
+margin_right = 7.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 7, 0 )
+custom_fonts/font = SubResource( 3 )
+text = ">"
+
+[node name="optionName" type="Label" parent="CenterContainer/VBoxContainer/ContainerBackMenu/HBoxContainer"]
+margin_left = 11.0
+margin_right = 102.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 49, 0 )
+custom_fonts/font = SubResource( 4 )
+text = "Back to menu"

@@ -1,6 +1,6 @@
 extends KinematicBody
 
-
+#variables 
 var player 
 var move_speed = 400
 var follow_player = false
@@ -8,7 +8,7 @@ var enermy_health = 50
 var player_list = ["res://Player.tscn"]
 var enemy_attack = 10
 
-
+#make enermy die
 func _process(delta):
 	if enermy_health <=0:
 		print("dead")
