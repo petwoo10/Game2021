@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
@@ -9,11 +9,15 @@
 [ext_resource path="res://rock_big.tscn" type="PackedScene" id=7]
 [ext_resource path="res://rock_lager.tscn" type="PackedScene" id=8]
 [ext_resource path="res://WATER.tscn" type="PackedScene" id=9]
+[ext_resource path="res://FinshingGame.gd" type="Script" id=10]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 
+[sub_resource type="BoxShape" id=2]
+
 [node name="test level" type="Spatial"]
+script = ExtResource( 10 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.83961, 0.40366, -0.363475, 0.00910424, 0.679513, 0.733607, 0.543113, 0.612635, -0.574201, -15.8766, 26.0029, -17.471 )
@@ -35,7 +39,8 @@ environment = SubResource( 1 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.839396, 0.379406, 0.389186, -0.202828, -0.882979, 0.423331, 0.504257, 0.276405, 0.818123, 28.4591, 27.8647, 0 )
-light_energy = 10.24
+light_color = Color( 0.901961, 0.545098, 0.419608, 1 )
+light_energy = 5.22
 light_indirect_energy = 0.0
 light_specular = 0.4
 shadow_enabled = true
@@ -48,19 +53,112 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7748, 5.95419, 40.5396 )
 [node name="rock_big3" parent="." instance=ExtResource( 7 )]
 transform = Transform( 2.18086, 0, -2.37999, 0, 3.22808, 0, 2.37999, 0, 2.18086, 34.7846, 19.1573, 153.775 )
 
+[node name="rock_big4" parent="." instance=ExtResource( 7 )]
+transform = Transform( 2.12097, -0.751334, -2.31463, 0.507594, 3.13943, -0.553941, 2.37999, 0, 2.18086, -49.6601, 31.28, 312.872 )
+
+[node name="rock_big5" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.63042, -0.226356, -2.77687, -1.79795, 2.54327, 0.848344, 2.12829, 1.97511, -1.41062, 18.0872, 55.9763, 454.035 )
+
+[node name="rock_big6" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.63042, -0.226356, -2.77687, 1.90128, 2.26139, -1.30067, 2.0365, -2.29246, -1.00885, 34.1549, 49.9463, 404.107 )
+
+[node name="rock_big7" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.63042, -0.226356, -2.77687, -0.922567, 3.07976, 0.290636, 2.6289, 0.940405, -1.6202, 63.4984, 49.9463, 348.688 )
+
 [node name="tree_long" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 24.8494, 4.76015, 38.3238 )
+
+[node name="tree_long2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -42.5647, 31.3041, 242.564 )
+
+[node name="tree_long3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 24.91, 32.9517, 236.385 )
+
+[node name="tree_long8" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 24.91, 30.4099, 225.268 )
+
+[node name="tree_long9" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 20.2093, 30.4099, 230.559 )
+
+[node name="tree_long10" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -51.4397, 30.4099, 231.516 )
+
+[node name="tree_long11" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -24.2713, 30.4099, 231.516 )
+
+[node name="tree_long14" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 37.952, 57.1933, 379.851 )
+
+[node name="tree_long15" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 32.8846, 54.012, 373.503 )
+
+[node name="tree_long18" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 22.6161, 54.012, 373.503 )
+
+[node name="tree_long19" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 14.6128, 54.012, 385.182 )
+
+[node name="tree_long20" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 41.6131, 47.3906, 355.011 )
+
+[node name="tree_long16" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 35.1659, 51.0895, 359.488 )
+
+[node name="tree_long17" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 4.37543, 59.8139, 422.007 )
+
+[node name="tree_long13" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -24.2713, 30.4099, 231.516 )
+
+[node name="tree_long12" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -24.2713, 24.4589, 200.9 )
+
+[node name="tree_long4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -42.5647, 17.986, 144.342 )
+
+[node name="tree_long5" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 51.0392, 26.67, 212.896 )
+
+[node name="tree_long6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, -63.6826, 24.8582, 203.815 )
+
+[node name="tree_long7" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1.5, 0, 0, 0, 1, 2.81132, 26.3504, 191.677 )
 
 [node name="GROUND " parent="." instance=ExtResource( 4 )]
 transform = Transform( -3, 0, -4.52987e-07, 0, 3, 0, 4.52987e-07, 0, -3, 0, 51.6409, 324.599 )
 
+[node name="GROUND 2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -3, 0, -4.52987e-07, 1.79817e-08, 2.99764, -0.119087, 4.5263e-07, -0.119087, -2.99764, 0, 143.84, 849.228 )
+
+[node name="GROUND 3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -3, 0, -4.52987e-07, 4.74129e-08, 2.98352, -0.314002, 4.50499e-07, -0.314002, -2.98352, 0, 253.444, 1330.29 )
+
 [node name="rock_lager2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.2475, 24.3261, 176.486 )
+
+[node name="rock_lager3" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5975, 38.5692, 260.893 )
+
+[node name="rock_lager4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.0216753, 0, 0.999765, 0, 1, 0, -0.999765, 0, 0.0216753, 2.07715, 48.6298, 324.134 )
+
+[node name="rock_lager5" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.8596, 57.7121, 373.929 )
 
 [node name="rock_lager" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6936, 12.1631, 88.243 )
 
 [node name="WATER" parent="." instance=ExtResource( 9 )]
 transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 10, 0, -3.56869, 0 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 329.321, 1669.08 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 
 [editable path="Player"]
