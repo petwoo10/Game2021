@@ -17,7 +17,7 @@ func _physics_process(delta):
 		engine_force = 0 
 	
 	if Input.is_action_pressed("back"):
-		brake = braking
+		engine_force = -acclen
 	else:
 		brake = 0 
 	

@@ -1,7 +1,9 @@
 extends Spatial
 
 
-var speed = 1
+var speed = 2.8
+
+
 
 # this is how water risers
 func _process(delta):
