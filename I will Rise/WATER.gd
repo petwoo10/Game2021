@@ -1,7 +1,7 @@
 extends Spatial
 
 
-var speed = 1.8
+var speed = 2.3
 
 
 

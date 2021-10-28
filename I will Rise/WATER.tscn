@@ -10,6 +10,7 @@ extents = Vector3( 106.114, 1, 103.602 )
 script = ExtResource( 2 )
 
 [node name="Area" type="Area" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.89859, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.46653, 0 )
