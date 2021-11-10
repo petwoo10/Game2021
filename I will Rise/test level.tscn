@@ -1456,17 +1456,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6936, 12.1631, 88.243 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 226.939, 1120.01 )
 
 [node name="Position3D2" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 687.855, 2247.62 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 687.855, 2349.55 )
 
 [node name="Position3D3" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.918, 650.273, 2239.78 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.918, 650.273, 2297.01 )
 
 [node name="WATER" parent="." instance=ExtResource( 9 )]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 25, 0, -28.8462, 0 )
 
-[node name="Area2" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75.3474, 0, 0 )
-collision_layer = 2
+[node name="Area2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.1125, 0, 0 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape" type="CollisionShape" parent="Area2"]
 transform = Transform( 1, 0, 0, 0, 500, 0, 0, 0, 1200, 2.97925, 172.821, 1236.4 )
