@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/rockTexture1.png-0a316a1ad973179cefd05235d2048fbc.s3tc.stex"
-path.etc2="res://.import/rockTexture1.png-0a316a1ad973179cefd05235d2048fbc.etc2.stex"
+path.s3tc="res://.import/PolyPackVehicles.png-9e7dc08535e6ab884e722b6186c67f05.s3tc.stex"
+path.etc2="res://.import/PolyPackVehicles.png-9e7dc08535e6ab884e722b6186c67f05.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://model/RockTexture/rockTexture1.png"
-dest_files=[ "res://.import/rockTexture1.png-0a316a1ad973179cefd05235d2048fbc.s3tc.stex", "res://.import/rockTexture1.png-0a316a1ad973179cefd05235d2048fbc.etc2.stex" ]
+source_file="res://Realistic Car Pack - Nov 2018/PolyPackVehicles.png"
+dest_files=[ "res://.import/PolyPackVehicles.png-9e7dc08535e6ab884e722b6186c67f05.s3tc.stex", "res://.import/PolyPackVehicles.png-9e7dc08535e6ab884e722b6186c67f05.etc2.stex" ]
 
 [params]
 

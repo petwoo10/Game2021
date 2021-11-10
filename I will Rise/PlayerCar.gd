@@ -2,7 +2,7 @@ extends VehicleBody
 
 
 var acclen = 400
-var turn_speed = 1
+var turn_speed = 0.5
 var streing_taget 
 var braking = 10
 onready var water = $"../WATER"
