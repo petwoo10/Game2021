@@ -26,7 +26,7 @@ func _physics_process(delta):
 
 #if water.global_transform.translation.y > global_transform.translation.y:
 #
-#timer for watter damageing over time
+#timer for watter damageing over time to the player
 
 func _on_Timer_timeout():
 	if water.global_transform.origin.y > global_transform.origin.y:

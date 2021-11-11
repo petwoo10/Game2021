@@ -1,6 +1,6 @@
 extends ProgressBar
 
-
+#makes it that you go to anoter secne that shows you have lost the game 
 const losegame = "res://losegame.tscn"
 
 var health 
@@ -14,7 +14,7 @@ func _ready():
 	
 	 
 	
-#how it changers the health and shows it. 
+#how it changers the health and shows it.and what happens when you die 
 func change_health(amount):
 	health += amount
 	health = clamp(health,0,health_max)

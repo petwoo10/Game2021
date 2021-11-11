@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://rock_lager.tscn" type="PackedScene" id=8]
 [ext_resource path="res://WATER.tscn" type="PackedScene" id=9]
 [ext_resource path="res://FinshingGame.gd" type="Script" id=10]
+[ext_resource path="res://losearea.gd" type="Script" id=11]
 [ext_resource path="res://spwaner.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Environment" id=1]
@@ -18,6 +19,8 @@ ambient_light_color = Color( 0.603922, 0.603922, 0.603922, 1 )
 [sub_resource type="BoxShape" id=2]
 
 [sub_resource type="BoxShape" id=3]
+
+[sub_resource type="BoxShape" id=4]
 
 [node name="test level" type="Spatial"]
 script = ExtResource( 10 )
@@ -1480,6 +1483,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 584.003, 2292.08 )
 transform = Transform( 200, 0, 0, 0, 200, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 3 )
 
+[node name="Area3" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -172.139, -64.3263 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area3"]
+transform = Transform( 0.0264561, -499.825, 0, 0.99965, 13.228, 0, 0, 0, 1600, 0, 134.003, 1238.22 )
+shape = SubResource( 4 )
+
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area3" to="Area3" method="_on_Area3_body_entered"]
 
 [editable path="Player"]

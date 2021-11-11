@@ -1,9 +1,9 @@
 extends Position3D
-
+# the object that is spawing 
 var Boulder = preload("res://boulder.tscn")
 
 onready var timer = $Timer
-
+#the radom timer of when the boulder spawns with added foces to move it 
 func _on_Timer_timeout():
 	var boulder = Boulder.instance()
 	add_child(boulder)
